@@ -1,13 +1,13 @@
 const mongo = require('mongoose')
 
 const dbschema = new mongo.Schema ({
-    'name':{
+    'Name':{
         type: String,
         required: [true, 'Please provide a valid name'],
         trim: true,
     },
 
-    'designation':{
+    'Designation':{
         type: String,
         required: [true, 'Please provide your desination'],
         trim: true
