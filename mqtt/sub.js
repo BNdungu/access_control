@@ -10,9 +10,7 @@ const client = mqtt.connect({
 const  connect = ((topic) => { 
     return client.on('connect',() => {
 	    client.subscribe(topic,(err) => {
-		    if(!err) {
-			    console.log(`Subscribed to ${topic}`)
-		    }
+		    console.log(`Connected to mqtt broker @${process.env.hostName}`)
 	    })
     })
 })
