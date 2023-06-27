@@ -1,9 +1,10 @@
+require('dotenv').config()
 const mqtt = require('mqtt')
 
 const client = mqtt.connect({
-	protocal:'mqtt',
-	host:'13.48.47.239',
-	port:1883
+	protocal:process.env.protocal,
+	host:process.env.hostName,
+	port:process.env.port
 })
 
 const  connect = ((topic) => { 
