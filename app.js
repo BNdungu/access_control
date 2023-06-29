@@ -3,18 +3,19 @@ const {msg} = require('./mqtt/handlemsg')
 const connectDB = require('./db/db')
 const client = require('./mqtt/new')
 const model = require('./model/schema')
-require('dotenv').config()
+require('dotenv').config() 
 
 let received_msg;
 
 
 const trial = async () => {
   try {
-    await subscribePromise('ping');
+    await subscribePromise('id');
     console.log('Subscription successful');
   
     client.on('message', async (topic, message) => {
      try { 
+		console.log('I\'m Over here')
 		received_msg = JSON.parse(message)
 	  	console.log(received_msg.id)
 	
