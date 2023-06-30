@@ -7,7 +7,7 @@ import json
 from umqtt.simple import MQTTClient
 
 wlan = network.WLAN(network.STA_IF)
-wlan.active(True)
+wlan.active(True) 
 
 if wlan.isconnected == False:
     import wifi
