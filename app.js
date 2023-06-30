@@ -7,7 +7,6 @@ require('dotenv').config()
 
 let received_msg;
 
-
 const trial = async () => {
   try {
     await subscribePromise('id');
