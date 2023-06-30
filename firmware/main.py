@@ -1,4 +1,4 @@
-from machine import Pin
+from machine import Pin 
 import network
 from rfid import MFRC522  
 from time import sleep
