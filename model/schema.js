@@ -4,7 +4,7 @@ const dbschema = new mongo.Schema ({
     'Name':{
         type: String,
         required: [true, 'Please provide a valid name'],
-        trim: true,
+        trim: true, 
     },
 
     'Designation':{
