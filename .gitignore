@@ -1,2 +1,9 @@
 node_modules/
 .env
+.gitignore
+<<<<<<< HEAD
+=======
+firmware/credentials.py
+firmware/.vscode/
+firmware/.picowgo
+>>>>>>> b720035304721e5c8c8e671826fee00a5fd396dc

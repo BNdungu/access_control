@@ -3,11 +3,10 @@ const {msg} = require('./mqtt/handlemsg')
 const connectDB = require('./db/db')
 const client = require('./mqtt/new')
 const model = require('./model/schema')
-require('dotenv').config()
+require('dotenv').config() 
 
 let received_msg;
-
-
+   
 const trial = async () => {
   try {
     await subscribePromise('ping');
@@ -16,11 +15,9 @@ const trial = async () => {
     client.on('message', async (topic, message) => {
      try { 
 		received_msg = JSON.parse(message)
-	  	console.log(received_msg.id)
 	
 		const indiv = await model.findOne({id:received_msg.id})
 		if(indiv){
-			console.log(indiv.Name)
 			client.publish('responce', 'valid')
 			client.publish('res',indiv.toString())
 		}
@@ -41,8 +38,3 @@ const start = async () => {
 
 start()
 trial(); 
- 
-
-
-
- 
