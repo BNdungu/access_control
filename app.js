@@ -9,18 +9,15 @@ let received_msg;
    
 const trial = async () => {
   try {
-    await subscribePromise('id');
+    await subscribePromise('ping');
     console.log('Subscription successful');
   
     client.on('message', async (topic, message) => {
      try { 
-		console.log('I\'m Over here')
 		received_msg = JSON.parse(message)
-	  	console.log(received_msg.id)
 	
 		const indiv = await model.findOne({id:received_msg.id})
 		if(indiv){
-			console.log(indiv.Name)
 			client.publish('responce', 'valid')
 			client.publish('res',indiv.toString())
 		}
