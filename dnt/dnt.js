@@ -10,7 +10,7 @@ const time = () => {
     }).format(currentTime)
     return now
 }
-
+ 
 const date = () => {
        const today = new Intl.DateTimeFormat('en-US', {
         weekday: 'long',
