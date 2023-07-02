@@ -1,10 +1,11 @@
 const {subscribePromise} = require('../mqtt/subscribe')
 const client = require('../mqtt/client')
-const model = require('../model/schema')
+const model = require('../model/schema');
+const {timeStamp, formatedTime} = require('./attendance');
 
 
 const idChecker = async () => {
-  try {
+  try {    
     await subscribePromise('ping');
     console.log('Subscription successful');
   
@@ -14,6 +15,11 @@ const idChecker = async () => {
 	
 		const indiv = await model.findOne({id:received_msg.id})
 		if(indiv){
+			const data = {
+				"Name": indiv.Name,
+				"Department": indiv.Department,
+			}
+			timeStamp(data)
 			client.publish('responce', 'valid')
 			client.publish('res',indiv.toString())
 		}
@@ -26,7 +32,7 @@ const idChecker = async () => {
     console.error('Error subscribing:', error);
   }
 };
-
+ 
 const start = async () => {
 	await connectDB(process.env.db)
 	console.log('Connected to the Database')
