@@ -1,7 +1,6 @@
 const {subscribePromise} = require('./mqtt/subscribe')
-const {msg} = require('./mqtt/handlemsg')
 const connectDB = require('./db/db')
-const client = require('./mqtt/new')
+const client = require('./mqtt/client')
 const model = require('./model/schema')
 require('dotenv').config() 
 

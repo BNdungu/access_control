@@ -1,4 +1,4 @@
-const client = require('./new')
+const client = require('./client')
 
 const subscribePromise = (topic) => {
   return new Promise((resolve, reject) => {
