@@ -33,8 +33,13 @@ client.on_disconnect = on_disconnect
 
 client.connect(broker_url, broker_port)
 
+case = True
+
 topic = input("Input your topic: ")
-message = input("Input your message: ")
-client.publish(topic, message)
+while case:
+    message = input("Input your message: ")
+    if message == "quit":
+        case = False
+    client.publish(topic, message)
 
 client.disconnect()
