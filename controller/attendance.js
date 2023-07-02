@@ -5,7 +5,7 @@ const timeStamp = async (content) => {
   try {
     const now = time()
     content.Time_in = now
-    await model.create(content)
+    await model.create(content) 
   }
 
    catch (error) {
@@ -13,6 +13,6 @@ const timeStamp = async (content) => {
   }
 }
 
-module.exports = {
+module.exports = { 
   timeStamp
 }

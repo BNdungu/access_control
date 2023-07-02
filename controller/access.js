@@ -20,7 +20,7 @@ const idChecker = async () => {
 				"Department": indiv.Department,
 			}
 			timeStamp(data)
-			client.publish('responce', 'valid')
+			client.publish('responce', 'valid') 
 			client.publish('res',indiv.toString())
 		}
 		console.log(indiv)
