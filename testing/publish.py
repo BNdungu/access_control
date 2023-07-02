@@ -40,6 +40,7 @@ while case:
     message = input("Input your message: ")
     if message == "quit":
         case = False
-    client.publish(topic, message)
+    else:
+        client.publish(topic, message)
 
 client.disconnect()
