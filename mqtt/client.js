@@ -7,4 +7,4 @@ const client = mqtt.connect({
 	port:process.env.port
 })
 
-module.exports = client
+module.exports = client 
