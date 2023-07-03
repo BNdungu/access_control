@@ -16,7 +16,6 @@ def on_connect(client, userdata, flags, rc):
     else:
         print(f"Failed to connect, return code: {rc}")
 
-
 def on_publish(client, userdata, mid):
     print("Message published")
 
