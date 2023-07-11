@@ -14,4 +14,4 @@ const subscribePromise = (topic) => {
 };
 
         
-module.exports = {subscribePromise}
+module.exports = {subscribePromise} 
