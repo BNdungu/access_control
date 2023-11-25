@@ -29,6 +29,7 @@ const idChecker = async () => {
 	  } 
     });
   } catch (error) {
+	  console.log("Caught an error")
     console.error('Error subscribing:', error);
   }
 };
