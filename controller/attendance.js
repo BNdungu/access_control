@@ -9,6 +9,7 @@ const timeStamp = async (content) => {
   }
 
    catch (error) {
+     console.log("error")
     throw error
   }
 }
