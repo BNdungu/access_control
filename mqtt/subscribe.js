@@ -6,7 +6,7 @@ const subscribePromise = (topic) => {
       if (err) {
         reject(err); // Reject the promise if there's an error
       } else {
-        console.log(`Subscribed to topic: ${topic}`);
+        console.log(`Subscribed on topic: ${topic}`);
 console.log();
         resolve(); // Resolve the promise when the subscription is successful
       }
