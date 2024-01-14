@@ -1,3 +1,4 @@
+// Date and time
 const currentTime = new Date()
 
 const time = () => {
